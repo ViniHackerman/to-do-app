@@ -1,61 +1,55 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
 }
-
-:root{
+:root {
     --bg-header-mobile: url(../imagens/bg-header-mobile-light.png);
-    --input-box-shadow: rgba(194, 195,214, 0.50)
-    --input-color:#494c6b
-    --button-color:#393a4b
-    --bg-body:#FAFAFA
-    --bg-tarefas:#fff
+    --input-box-shadow: rgba(194, 195, 214, 0.50);
+    --input-color:#494C6B;
+    --button-color:#393A4B;
+    --bg-body: #FAFAFA;
+    --bg-tarefas: #fff;
     --box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
-    --border-color: #e3e4f1
-    --text-color:#494c6b;
-    --info-text-color:#9495A5
+    --border-color: #E3E4F1;
+    --text-color: #494C6B;
+    --info-text-color: #9495A5 ; 
 }
-
-body{
+body {
     background: var(--bg-body);
 }
-header{
+header {
     background-image: var(--bg-header-mobile);
-    background-repeat:no-repeat ;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 12.5rem;
-
     padding: 3rem 1.75rem 0;
 }
 
-header > div{
+header div {
+header > div {
     max-width: 33.75rem;
     margin-inline: auto;
-}
+}}
 
 header div div{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    margin-bottom:2.5rem;
+    margin-bottom: 2.5rem;
 }
-
-header div h1{
+header div h1 {
     color: #fff;
     text-transform: uppercase;
 }
-
-header form{
+header form {
     display: flex;
     gap: 0.5rem;
 }
-
-header form input{
-    padding:1.12rem;
+header form input {
+    padding: 1.12rem;
     border-radius: 0.3125rem;
     border: none;
     box-shadow: 0px 35px 50px -15px var(--input-box-shadow);
@@ -63,63 +57,49 @@ header form input{
     outline: none;
     font-size: 0.75rem;
     color: var(--input-color);
-
 }
-
-header form button{
+header form button {
     padding: 0.75rem;
     border-radius: 0.3125rem;
-    border: none ;
-    background: rgb(89, 88, 88);
-    color: #fff;
+    border: none;
+    background: var(--button-color);
+    color: #FFF;
 }
-
 main {
-    
-    min-height:calc(100vh - 12.5rem) ;
+    min-height: calc(100vh - 12.5rem);
     padding-inline: 1.75rem;
 }
-
-.tarefas{
-    background:var(--bg-tarefas) ;
-    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
+.tarefas {
+    background: var(--bg-tarefas);
+    box-shadow: var(--box-shadow);
     border-radius: 0.3125rem;
     margin-top: -1rem;
     max-width: 33.75rem;
     margin-inline: auto;
 }
 
-.tarefas .tarefa{
+.tarefas .tarefa {
     padding: 1rem 1.25rem;
-    
 }
-
-.tarefas .tarefa + .tarefa{
-
+.tarefas .tarefa + .tarefa {
     border-top: 1px solid var(--border-color);
 }
-.tarefa form{
+.tarefa form {
     display: flex;
     justify-content: space-between;
-    
-    
 }
-
-
-.tarefa div{
+.tarefa div {
     display: flex;
-    align-items:center ;
+    align-items: center;
     gap: 0.75rem;
     color: var(--text-color);
     font-size: 0.75rem;
 }
-.terefa button{
+.tarefa button {
     border: none;
     background: none;
-
 }
-
-.informacoes{
+.informacoes {
     border-top: 1px solid var(--border-color);
     padding: 1rem 1.25rem;
     display: flex;
@@ -127,24 +107,22 @@ main {
     font-size: 0.75rem;
     color: var(--info-text-color);
 }
-
 .informacoes a,
-.botoes a{
+.botoes a {
     text-decoration: none;
     color: var(--info-text-color);
-
 }
 
-.informacoes .botoes{
+.informacoes .botoes {
     display: none;
-
 }
 
 .botoes {
     padding-block: 1rem;
-    background:var(--bg-tarefas) ;
+    background: var(--bg-tarefas);
     border-radius: 0.3125rem;
     margin-top: 1rem;
+    box-shadow: var(--box-shadow);
     max-width: 33.75rem;
     margin-inline: auto;
 
@@ -155,27 +133,29 @@ main {
     font-size: 0.875rem;
 }
 
-@media(min-width:1000px){
-    section.botoes{
+@media(min-width: 1000px) {
+    section.botoes {
         display: none;
     }
 
-    .informacoes .botoes{
+    .informacoes .botoes {
         display: flex;
         padding: 0;
-        margin-top: 0;
-
-        
+        margin: 0;
+        gap: 2rem;
     }
 
-    .tarefa button{
+    .tarefa button {
         visibility: hidden;
     }
 
     .tarefa input:hover,
-    .terefa label:hover,
-    .terefa button:hover{
-        visibility: initial;
+    .tarefa label:hover,
+    .tarefa button:hover {
+        cursor: pointer;
+    }
 
+    .tarefa:hover button {
+        visibility: initial;
     }
 }
